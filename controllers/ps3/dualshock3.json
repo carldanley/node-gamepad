@@ -5,27 +5,19 @@
         {
             "name" : "left",
             "x" : {
-                "pin" : 6,
-                "min" : 0,
-                "max" : 255
+                "pin" : 6
             },
             "y" : {
-                "pin" : 7,
-                "min" : 0,
-                "max" : 255
+                "pin" : 7
             }
         },
         {
             "name" : "right",
             "x" : {
-                "pin" : 8,
-                "min" : 0,
-                "max" : 255
+                "pin" : 8
             },
             "y" : {
-                "pin" : 9,
-                "min" : 0,
-                "max" : 255
+                "pin" : 9
             }
         }
     ],
