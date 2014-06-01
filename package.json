@@ -1,0 +1,26 @@
+{
+    "name": "node-gamepad",
+    "description": "node-gamepad is a package for node that allows you to effortlessly interface your node applications with a variety of gamepad controllers.",
+    "version": "0.1.0",
+    "homepage": "https://github.com/carldanley/node-gamepad",
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:carldanley/node-gamepad.git"
+    },
+    "author": {
+        "name": "Carl Danley",
+        "url": "https://github.com/carldanley/snes-controller"
+    },
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/carldanley/node-gamepad/issues"
+    },
+    "engines": {
+        "node": ">= 0.10.28"
+    },
+    "dependencies": {
+        "node-hid": ">= 0.3.1"
+    },
+    "files": []
+}
