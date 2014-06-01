@@ -4,62 +4,62 @@
     "buttons" : [
         {
             "name": "up",
-            "block": 1,
+            "pin": 1,
             "value": 0
         },
         {
             "name": "down",
-            "block": 1,
+            "pin": 1,
             "value": 255
         },
         {
             "name": "left",
-            "block": 0,
+            "pin": 0,
             "value": 0
         },
         {
             "name": "right",
-            "block": 0,
+            "pin": 0,
             "value": 255
         },
         {
             "name": "x",
-            "block": 3,
+            "pin": 3,
             "value": 1
         },
         {
             "name": "y",
-            "block": 3,
+            "pin": 3,
             "value": 8
         },
         {
             "name": "a",
-            "block": 3,
+            "pin": 3,
             "value": 2
         },
         {
             "name": "b",
-            "block": 3,
+            "pin": 3,
             "value": 4
         },
         {
             "name": "l",
-            "block": 3,
+            "pin": 3,
             "value": 16
         },
         {
             "name": "r",
-            "block": 3,
+            "pin": 3,
             "value": 32
         },
         {
             "name": "select",
-            "block": 4,
+            "pin": 4,
             "value": 1
         },
         {
             "name": "start",
-            "block": 4,
+            "pin": 4,
             "value": 2
         }
     ]

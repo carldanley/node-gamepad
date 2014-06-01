@@ -1,5 +1,196 @@
 {
     "vendorID" : 1356,
     "productID" : 616,
-    "buttons" : []
+    "joysticks" : [
+        {
+            "name" : "left",
+            "x" : {
+                "pin" : 6,
+                "min" : 0,
+                "max" : 255
+            },
+            "y" : {
+                "pin" : 7,
+                "min" : 0,
+                "max" : 255
+            }
+        },
+        {
+            "name" : "right",
+            "x" : {
+                "pin" : 8,
+                "min" : 0,
+                "max" : 255
+            },
+            "y" : {
+                "pin" : 9,
+                "min" : 0,
+                "max" : 255
+            }
+        }
+    ],
+    "buttons" : [
+        {
+            "name" : "dpadUp",
+            "pin" : 2,
+            "value" : 16
+        },
+        {
+            "name" : "dpadDown",
+            "pin" : 2,
+            "value" : 64
+        },
+        {
+            "name" : "dpadLeft",
+            "pin" : 2,
+            "value" : 128
+        },
+        {
+            "name" : "dpadRight",
+            "pin" : 2,
+            "value" : 32
+        },
+        {
+            "name" : "select",
+            "pin" : 2,
+            "value" : 1
+        },
+        {
+            "name" : "start",
+            "pin" : 2,
+            "value" : 8
+        },
+        {
+            "name" : "leftAnalogBump",
+            "pin" : 2,
+            "value" : 2
+        },
+        {
+            "name": "rightAnalogBump",
+            "pin": 2,
+            "value": 4
+        },
+        {
+            "name" : "r1",
+            "pin" : 3,
+            "value" : 8
+        },
+        {
+            "name" : "r2",
+            "pin" : 3,
+            "value" : 2
+        },
+        {
+            "name" : "l1",
+            "pin" : 3,
+            "value" : 4
+        },
+        {
+            "name" : "l2",
+            "pin" : 3,
+            "value" : 1
+        },
+        {
+            "name" : "square",
+            "pin" : 3,
+            "value" : 128
+        },
+        {
+            "name" : "circle",
+            "pin" : 3,
+            "value" : 32
+        },
+        {
+            "name" : "triangle",
+            "pin" : 3,
+            "value" : 16
+        },
+        {
+            "name" : "x",
+            "pin" : 3,
+            "value" : 64
+        },
+        {
+            "name" : "psx",
+            "pin" : 4,
+            "value" : 1
+        },
+        {
+            "name" : "r2",
+            "pin" : 3,
+            "value" : 2
+        }
+    ],
+    "status" : [
+        {
+            "name" : "charging",
+            "pin" : 29,
+            "states" : [
+                {
+                    "value" : 0,
+                    "state" : "charging"
+                },
+                {
+                    "value" : 2,
+                    "state" : "charging"
+                },
+                {
+                    "value" : 3,
+                    "state" : "not charging"
+                }
+            ]
+        },
+        {
+            "name" : "battery",
+            "pin" : 30,
+            "states" : [
+                {
+                    "value" : 238,
+                    "state" : "Charging"
+                },
+                {
+                    "value" : 0,
+                    "state" : "No charge"
+                },
+                {
+                    "value" : 1,
+                    "state" : "20%"
+                },
+                {
+                    "value" : 2,
+                    "state" : "40%"
+                },
+                {
+                    "value" : 3,
+                    "state" : "60%"
+                },
+                {
+                    "value" : 4,
+                    "state" : "80%"
+                },
+                {
+                    "value" : 5,
+                    "state" : "100%"
+                }
+            ]
+        },
+        {
+            "name" : "connection",
+            "pin" : 31,
+            "states" : [
+                {
+                    "value" : 18,
+                    "state" : "usb"
+                },
+                {
+                    "value" : 22,
+                    "state" : "bluetooth"
+                },
+                {
+                    "value" : 20,
+                    "state" : "rumbling"
+                }
+            ]
+        }
+    ]
 }
