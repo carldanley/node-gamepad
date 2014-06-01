@@ -47,6 +47,23 @@ controller.on( 'down:press', function() {
 } );
 ```
 
+## Supported Events
+
+This package supports up to 3 different types of components: joysticks, buttons and statuses (like battery level, charging, etc).
+
+### Joysticks
+
+1. `:move`
+
+### Buttons
+
+1. `:press`
+1. `:release`
+
+### Statuses
+
+1. `:change`
+
 ## License
 
 The MIT License (MIT)
