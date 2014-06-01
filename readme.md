@@ -8,6 +8,11 @@
 npm install node-gamepad
 ```
 
+### Supported Controllers
+
+1. SNES
+1. PS3
+
 ## How to Use
 
 Plug in a supported controller and run a variation of the code below:
