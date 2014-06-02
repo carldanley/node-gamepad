@@ -1,0 +1,87 @@
+{
+    "vendorID": 121,
+    "productID": 6,
+    "joysticks": [
+        {
+            "name": "center",
+            "x": {
+                "pin": 0
+            },
+            "y": {
+                "pin": 1
+            }
+        }
+    ],
+    "buttons": [
+        {
+            "pin": 6,
+            "value": 4,
+            "name": "a"
+        },
+        {
+            "pin": 6,
+            "value": 16,
+            "name": "b"
+        },
+        {
+            "pin": 6,
+            "value": 8,
+            "name": "z"
+        },
+        {
+            "pin": 6,
+            "value": 1,
+            "name": "l"
+        },
+        {
+            "pin": 6,
+            "value": 2,
+            "name": "r"
+        },
+        {
+            "pin": 6,
+            "value": 32,
+            "name": "start"
+        },
+        {
+            "pin": 5,
+            "value": 79,
+            "name": "cDown"
+        },
+        {
+            "pin": 5,
+            "value": 143,
+            "name": "cLeft"
+        },
+        {
+            "pin": 5,
+            "value": 31,
+            "name": "cUp"
+        },
+        {
+            "pin": 5,
+            "value": 47,
+            "name": "cRight"
+        },
+        {
+            "pin": 5,
+            "value": 0,
+            "name": "dUp"
+        },
+        {
+            "pin": 5,
+            "value": 4,
+            "name": "dDown"
+        },
+        {
+            "pin": 5,
+            "value": 6,
+            "name": "dLeft"
+        },
+        {
+            "pin": 5,
+            "value": 2,
+            "name": "dRight"
+        }
+    ]
+}
