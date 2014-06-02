@@ -64,6 +64,10 @@ This package supports up to 3 different types of components: joysticks, buttons 
 
 1. `:change`
 
+## Contributing Controllers
+
+You can add controller configuration files to the controllers directory. They are namespaced by `platform/vendor.json`. Each configuration file contains the pins/values mapped to the name of each button, joystick or status. You can use the [hid-mapper](https://www.npmjs.org/package/hid-mapper) tool which will help you create all the necessary mappings to save to your configuration file.
+
 ## License
 
 The MIT License (MIT)
