@@ -34,6 +34,19 @@ controller.on( 'down:press', function() {
 } );
 ```
 
+If you want to use the same configuration for another controller but the vendorID and/or productID is different that the one included in the existing controller dictionary, you can simply pass in an optional second parameter when instantiating the new `GamePad` object:
+
+```js
+var GamePad = require( 'node-gamepad' );
+var controller = new GamePad( 'supported/controller', {
+	vendorID: 1337,
+	productID: 1338
+} );
+controller.connect();
+```
+
+Both `vendorID` and `productID` are individually optional key/value pairs you can specify. If they are defined, they will override the ones in the controller's dictionary file, thus allowing you to use the same mapping but with a different product and/or vendor ID.
+
 ## Supported Events
 
 This package supports up to 3 different types of components: joysticks, buttons and statuses (like battery level, charging, etc).

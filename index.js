@@ -7,12 +7,13 @@ var colors = require( 'colors' );
 module.exports = Gamepad;
 util.inherits( Gamepad, EventEmitter );
 
-function Gamepad( type ) {
+function Gamepad( type, options ) {
     EventEmitter.call( this );
     this._usb = null;
     this._type = type;
     this._config = {};
     this._states = {};
+    this._options = options || {};
 
     process.on( 'exit', this.disconnect.bind( this ) );
 }
@@ -25,6 +26,14 @@ Gamepad.prototype._loadConfiguration = function() {
     }
 
     this._config = require( path );
+
+    // if the user specified a custom vendorID or productID, use that instead
+    if( this._options.vendorID ) {
+        this._config.vendorID = parseInt( this._options.vendorID, 10 );
+    }
+    if( this._options.productID ) {
+        this._config.productID = parseInt( this._options.productID, 10 );
+    }
 };
 
 Gamepad.prototype.connect = function() {
