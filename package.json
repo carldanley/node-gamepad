@@ -1,7 +1,7 @@
 {
     "name": "node-gamepad",
     "description": "node-gamepad is a package for node that allows you to effortlessly interface your node applications with a variety of gamepad controllers.",
-    "version": "0.1.3",
+    "version": "0.1.4",
     "homepage": "https://github.com/carldanley/node-gamepad",
     "main": "index.js",
     "repository": {
@@ -27,5 +27,8 @@
         "controllers",
         "index.js",
         "readme.md"
+    ],
+    "contributors" : [
+        "Luke Karrys <luke@lukekarrys.com> (http://lukekarrys.com)"
     ]
 }
