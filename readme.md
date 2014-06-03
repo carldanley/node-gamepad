@@ -10,33 +10,20 @@ npm install node-gamepad
 
 ### Supported Controllers
 
-1. SNES
-1. PS3
+1. snes/tomee
+1. snes/retrolink
+1. ps3/dualshock3
+1. n64/retrolink
 
 ## How to Use
 
-Plug in a supported controller and run a variation of the code below:
+Plug in a supported controller and run a variation of the code below (with an actual supported controller):
 
-### For PS3
-
-```js
-var GamePad = require( 'node-gamepad' );
-var controller = new GamePad( 'ps3/dualshock3' );
-controller.connect();
-
-controller.on( 'up:press', function() {
-    console.log( 'up' );
-} );
-controller.on( 'down:press', function() {
-    console.log( 'down' );
-} );
-```
-
-### For SNES
+### Code Example
 
 ```js
 var GamePad = require( 'node-gamepad' );
-var controller = new GamePad( 'snes/tomee' );
+var controller = new GamePad( 'supported/controller/here' );
 controller.connect();
 
 controller.on( 'up:press', function() {
