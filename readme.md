@@ -49,20 +49,22 @@ Both `vendorID` and `productID` are individually optional key/value pairs you ca
 
 ## Supported Events
 
-This package supports up to 3 different types of components: joysticks, buttons and statuses (like battery level, charging, etc).
+This package supports up to 3 different types of components: joysticks, buttons and statuses (like battery level, charging, etc). It's possible that a controller could make use of all 3 different components or even introduce additional components. The idea here is the dictionary file will dictate how the controller will be used and how to read data from it.
 
 ### Joysticks
 
-1. `:move`
+1. `{name}:move` - When fired, this joystick event will provide an object literal with an `x` and `y` value.
 
 ### Buttons
 
-1. `:press`
-1. `:release`
+1. `{name}:press` - No data is attached to this callback but it serves the purpose of notifying the developer that a button has been pressed.
+1. `{name}:release` - No data is attached to this callback but it serves the purpose of notifying the developer that a button (that was previously pressed) has been released.
 
 ### Statuses
 
-1. `:change`
+A status value is read from a pin on the hardware and then can be mapped to a "state" (based on the dictionary file). See [this example](https://github.com/carldanley/node-gamepad/blob/master/controllers/ps3/dualshock3.json#L136) for more information.
+
+1. `{name}:change`
 
 ## Contributing Controllers
 
@@ -72,7 +74,7 @@ You can add controller configuration files to the controllers directory. They ar
 
 The MIT License (MIT)
 
-Copyright (c) 2014 Carl Danley
+Copyright (c) 2014 Carl Danley and contributors
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
