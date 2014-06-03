@@ -29,6 +29,6 @@
         "readme.md"
     ],
     "contributors" : [
-        "Luke Karrys <luke@lukekarrys.com> (http://lukekarrys.com)"
+        { "name" : "Luke Karrys", "email" : "luke@lukekarrys.com" }
     ]
 }
