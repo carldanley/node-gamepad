@@ -3,6 +3,7 @@ var EventEmitter = require( 'events' ).EventEmitter;
 var util = require( 'util' );
 var fs = require( 'fs' );
 var colors = require( 'colors' );
+var path = require('path');
 
 module.exports = Gamepad;
 util.inherits( Gamepad, EventEmitter );
@@ -19,13 +20,13 @@ function Gamepad( type, options ) {
 }
 
 Gamepad.prototype._loadConfiguration = function() {
-    var path = './controllers/' + this._type + '.json';
-    if( ! fs.existsSync( path ) ) {
+    var configPath = path.resolve( __dirname, './controllers/' + this._type + '.json' );
+    if( ! fs.existsSync( configPath ) ) {
         console.log( ( 'The controller configuration for "' + this._type + '" does not exist.' ).red );
         process.exit( 0 );
     }
 
-    this._config = require( path );
+    this._config = require( configPath );
 
     // if the user specified a custom vendorID or productID, use that instead
     if( this._options.vendorID ) {
@@ -42,16 +43,16 @@ Gamepad.prototype._hasProductId = function( str ) {
 
 Gamepad.prototype._detectProductId = function() {
     // check to see if the vendor exists
-    var path = './controllers/' + this._type + '/';
-    if( ! fs.existsSync( path ) ) {
+    var platformPath = path.resolve( __dirname, './controllers/' + this._type + '/' );
+    if( ! fs.existsSync( platformPath ) ) {
         console.log( ( 'The vendor "' + this._type + '" does not exist.' ).red );
         process.exit( 0 );
     }
 
     var devices = HID.devices();
-    var files = fs.readdirSync( path ), tmpConfig, tmpDevice;
+    var files = fs.readdirSync( platformPath ), tmpConfig, tmpDevice;
     for( var i = 0, len = files.length; i < len; i++ ) {
-        tmpConfig = path + files[ i ];
+        tmpConfig = platformPath + '/' + files[ i ];
         tmpConfig = require( tmpConfig );
 
         // check to see if this vendorID and productID exist
