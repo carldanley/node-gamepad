@@ -36,7 +36,43 @@ Gamepad.prototype._loadConfiguration = function() {
     }
 };
 
+Gamepad.prototype._hasProductId = function( str ) {
+    return str.indexOf( '/' ) > -1;
+};
+
+Gamepad.prototype._detectProductId = function() {
+    // check to see if the vendor exists
+    var path = './controllers/' + this._type + '/';
+    if( ! fs.existsSync( path ) ) {
+        console.log( ( 'The vendor "' + this._type + '" does not exist.' ).red );
+        process.exit( 0 );
+    }
+
+    var devices = HID.devices();
+    var files = fs.readdirSync( path ), tmpConfig, tmpDevice;
+    for( var i = 0, len = files.length; i < len; i++ ) {
+        tmpConfig = path + files[ i ];
+        tmpConfig = require( tmpConfig );
+
+        // check to see if this vendorID and productID exist
+        for( var j = 0, leng = devices.length; j < leng; j++ ) {
+            tmpDevice = devices[ j ];
+            if( tmpConfig.vendorID === tmpDevice.vendorId && tmpConfig.productID === tmpDevice.productId ) {
+                this._type = this._type + '/' + files[ i ].replace( '.json', '' );
+                return true;
+            }
+        }
+    }
+
+    return false;
+};
+
 Gamepad.prototype.connect = function() {
+    if( ! this._hasProductId( this._type ) && ! this._detectProductId() ) {
+        console.log( ( 'A product for the vendor "' + this._type + '" could not be detected.' ).red );
+        process.exit( 0 );
+    }
+
     this.emit( 'connecting' );
     this._loadConfiguration();
     this._usb = new HID.HID( this._config.vendorID, this._config.productID );
