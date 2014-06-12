@@ -48,6 +48,15 @@ controller.connect();
 
 Both `vendorID` and `productID` are individually optional key/value pairs you can specify. If they are defined, they will override the ones in the controller's dictionary file, thus allowing you to use the same mapping but with a different product and/or vendor ID.
 
+If you want to be implicit, you can drop the product ID from the controller type specification and node-gamepad will try to automatically detect the proper controller:
+
+```js
+var GamePad = require( 'node-gamepad' );
+var controller = new GamePad( 'snes' );
+```
+
+Please note: it's better to be explicit and specify the exact product ID so you don't run into any confusion with the configuration that's loaded.
+
 ## Supported Events
 
 This package supports up to 3 different types of components: joysticks, buttons and statuses (like battery level, charging, etc). It's possible that a controller could make use of all 3 different components or even introduce additional components. The idea here is the dictionary file will dictate how the controller will be used and how to read data from it.
