@@ -13,6 +13,7 @@ npm install node-gamepad
 1. snes/tomee
 1. snes/retrolink
 1. ps3/dualshock3
+1. ps4/dualshock4
 1. n64/retrolink
 
 ## How to Use
