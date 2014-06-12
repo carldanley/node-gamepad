@@ -1,0 +1,116 @@
+{
+    "vendorID": 1356,
+    "productID": 1476,
+    "buttons": [
+        {
+            "pin": 5,
+            "value": 0,
+            "name": "dpadUp"
+        },
+        {
+            "pin": 5,
+            "value": 6,
+            "name": "dpadLeft"
+        },
+        {
+            "pin": 5,
+            "value": 2,
+            "name": "dpadRight"
+        },
+        {
+            "pin": 5,
+            "value": 4,
+            "name": "dpadDown"
+        },
+        {
+            "pin": 6,
+            "value": 32,
+            "name": "options"
+        },
+        {
+            "pin": 6,
+            "value": 16,
+            "name": "share"
+        },
+        {
+            "pin": 5,
+            "value": 40,
+            "name": "x"
+        },
+        {
+            "pin": 5,
+            "value": 72,
+            "name": "circle"
+        },
+        {
+            "pin": 5,
+            "value": 24,
+            "name": "square"
+        },
+        {
+            "pin": 5,
+            "value": 136,
+            "name": "triangle"
+        },
+        {
+            "pin": 6,
+            "value": 2,
+            "name": "r1"
+        },
+        {
+            "pin": 9,
+            "value": 3,
+            "name": "r2"
+        },
+        {
+            "pin": 6,
+            "value": 1,
+            "name": "l1"
+        },
+        {
+            "pin": 8,
+            "value": 3,
+            "name": "l2"
+        },
+        {
+            "pin": 7,
+            "value": 2,
+            "name": "touch"
+        },
+        {
+            "pin": 7,
+            "value": 1,
+            "name": "psx"
+        },
+        {
+            "value":64,
+            "pin":6,
+            "name":"l3"
+        },
+        {
+            "value":128,
+            "pin":6,
+            "name":"r3"
+        }
+    ],
+    "joysticks": [
+        {
+            "name": "left",
+            "x": {
+                "pin": 1
+            },
+            "y": {
+                "pin": 2
+            }
+        },
+        {
+            "name": "right",
+            "x": {
+                "pin": 4
+            },
+            "y": {
+                "pin": 4
+            }
+        }
+    ]
+}
