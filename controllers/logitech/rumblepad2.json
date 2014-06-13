@@ -1,0 +1,122 @@
+{
+    "vendorID": 1133,
+    "productID": 49688,
+    "joysticks": [
+        {
+            "name": "left",
+            "x": {
+                "pin": 6
+            },
+            "y": {
+                "pin": 4
+            }
+        },
+        {
+            "name": "right",
+            "x": {
+                "pin": 2
+            },
+            "y": {
+                "pin": 3
+            }
+        }
+    ],
+    "buttons": [
+        {
+            "value": 1,
+            "pin": 0,
+            "name": "dpadLeft"
+        },
+        {
+            "value": 254,
+            "pin": 0,
+            "name": "dpadRight"
+        },
+        {
+            "value": 254,
+            "pin": 1,
+            "name": "dpadDown"
+        },
+        {
+            "value": 1,
+            "pin": 1,
+            "name": "dpadUp"
+        },
+        {
+            "value": 24,
+            "pin": 4,
+            "name": "1"
+        },
+      	{
+      	    "value": 40,
+      	    "pin": 4,
+      	    "name": "2"
+      	},
+        {
+            "value": 72,
+            "pin": 4,
+            "name": "3"
+        },
+        {
+            "value": 136,
+            "pin": 4,
+            "name": "4"
+        },
+        {
+            "value": 1,
+            "pin": 5,
+            "name": "l1"
+        },
+        {
+            "value": 4,
+            "pin": 5,
+            "name": "l2"
+        },
+        {
+            "value": 2,
+            "pin": 5,
+            "name": "r1"
+        },
+        {
+            "value": 8,
+            "pin": 5,
+            "name": "r2"
+        },
+        {
+            "value": 32,
+            "pin": 5,
+            "name": "start"
+        },
+        {
+            "value": 16,
+            "pin": 5,
+            "name": "select"
+        },
+        {
+            "value": 8,
+            "pin": 6,
+            "name": "modeOn"
+        },
+        {
+            "value": 0,
+            "pin": 6,
+            "name": "modeOff"
+        },
+        {
+            "value": 8,
+            "pin": 6,
+            "name": "vibration"
+        },
+        {
+            "value": 64,
+            "pin": 5,
+            "name": "leftJoystickClick"
+        },
+        {
+            "value": 8,
+            "pin": 5,
+            "name": "rightJoystickClick"
+        }
+
+    ]
+}
