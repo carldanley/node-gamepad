@@ -15,6 +15,7 @@ npm install node-gamepad
 1. ps3/dualshock3
 1. ps4/dualshock4
 1. n64/retrolink
+1. logitech/rumblepad2
 
 ## How to Use
 
