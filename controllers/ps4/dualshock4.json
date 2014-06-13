@@ -83,14 +83,14 @@
             "name": "psx"
         },
         {
-            "value":64,
-            "pin":6,
-            "name":"l3"
+            "value": 64,
+            "pin": 6,
+            "name": "l3"
         },
         {
-            "value":128,
-            "pin":6,
-            "name":"r3"
+            "value": 128,
+            "pin": 6,
+            "name": "r3"
         }
     ],
     "joysticks": [

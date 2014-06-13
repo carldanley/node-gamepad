@@ -110,12 +110,12 @@
         {
             "value": 64,
             "pin": 5,
-            "name": "leftJoystickClick"
+            "name": "l3"
         },
         {
             "value": 8,
             "pin": 5,
-            "name": "rightJoystickClick"
+            "name": "r3"
         }
 
     ]
