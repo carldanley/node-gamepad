@@ -53,12 +53,12 @@
             "value" : 8
         },
         {
-            "name" : "leftAnalogBump",
+            "name" : "leftJoystickClick",
             "pin" : 2,
             "value" : 2
         },
         {
-            "name": "rightAnalogBump",
+            "name": "rightJoystickClick",
             "pin": 2,
             "value": 4
         },
