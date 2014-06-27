@@ -1,13 +1,39 @@
-var HID = require( 'node-hid' );
-var EventEmitter = require( 'events' ).EventEmitter;
-var util = require( 'util' );
-var fs = require( 'fs' );
-var colors = require( 'colors' );
-var path = require('path');
+/**
+ * Allows you to effortlessly interface your node applications with a variety of gamepad controllers.
+ * 
+ * @example
+ *     var controller = ( new Gamepad( 'ps3/dualshock3' ) ).connect();
+ *     controller.on( 'x:press', function() {
+ *         // do something here.
+ *     } );
+ * @module Gamepad
+ */
 
+// load our dependencies into scope
+const HID = require( 'node-hid' );
+const EventEmitter = require( 'events' ).EventEmitter;
+const util = require( 'util' );
+const fs = require( 'fs' );
+const colors = require( 'colors' );
+const path = require('path');
+
+// export the constructor
 module.exports = Gamepad;
+
+// make sure the constructor inherits the properites necessary for EventEmitter to work
 util.inherits( Gamepad, EventEmitter );
 
+/**
+ * `Gamepad` is the base API object constructor.
+ *
+ * @class Gamepad
+ * @constructor
+ * 
+ * @param {String} type The type of gamepad to be loaded. This can follow 2 forms: (1) vendor ID or (2) vendor ID/productID. Thus, "ps3" and "ps3/dualshock3" are both valid options.
+ * @param {Object} options A hash of options that can be set by the user.
+ * @param {Number} [options.vendorID] When this value is specified it will overwrite the existing `vendorID` that's loaded from the detected configuration.
+ * @param {Number} [options.productID] When this value is specified it will overwrite the existing `productID` that's loaded from the detected configuration.
+ */
 function Gamepad( type, options ) {
     EventEmitter.call( this );
     this._usb = null;
@@ -16,9 +42,21 @@ function Gamepad( type, options ) {
     this._states = {};
     this._options = options || {};
 
+    // on process exit, disconnect from any devices we may be connected to.
     process.on( 'exit', this.disconnect.bind( this ) );
 }
 
+// Prototype Methods
+// =================
+
+/**
+ * This function will load the configuration file for the specified controller type.
+ * If the configuration file for the specified controller type does not exist, we
+ * bail.
+ *
+ * @private
+ * @method _loadConfiguration
+ */
 Gamepad.prototype._loadConfiguration = function() {
     var configPath = path.resolve( __dirname, './controllers/' + this._type + '.json' );
     if( ! fs.existsSync( configPath ) ) {
@@ -37,11 +75,36 @@ Gamepad.prototype._loadConfiguration = function() {
     }
 };
 
+/**
+ * Detects whether or not the specified string has a product ID in the form of 
+ * "vendorID/productID" or not.
+ *
+ * @private
+ * @method _hasProductId
+ * 
+ * @param {String} str The string we're using to check for a product ID.
+ * @return {Boolean} Indicates whether or not a product ID was detected.
+ */
 Gamepad.prototype._hasProductId = function( str ) {
     return str.indexOf( '/' ) > -1;
 };
 
-Gamepad.prototype._detectProductId = function() {
+/**
+ * Detects the configuration that will be used to load this controller type. If
+ * a controller configuration is already defined, we'll use it. Otherwise, we'll
+ * try to detect the specific controller configuration to use.
+ *
+ * @private
+ * @method _detectControllerConfiguration
+ * 
+ * @return {Boolean} Indicates whether or not the controller configuration could be detected.
+ */
+Gamepad.prototype._detectControllerConfiguration = function() {
+    // check to see if a product ID was already specified in the product type.
+    if( this._hasProductId( this._type ) ) {
+        return true;
+    }
+
     // check to see if the vendor exists
     var platformPath = path.resolve( __dirname, './controllers/' + this._type + '/' );
     if( ! fs.existsSync( platformPath ) ) {
@@ -49,6 +112,13 @@ Gamepad.prototype._detectProductId = function() {
         process.exit( 0 );
     }
 
+    // we know the vendor exists, so loop through HID devices and the
+    // configurations for this particular vendor while checking to see if any of
+    // them match each other (indicating that we have a configuration something
+    // that is currently plugged in).
+    // 
+    // TODO: make this faster by looping through loaded controllers once instead
+    // of once per HID device.
     var devices = HID.devices();
     var files = fs.readdirSync( platformPath ), tmpConfig, tmpDevice;
     for( var i = 0, len = files.length; i < len; i++ ) {
@@ -69,7 +139,7 @@ Gamepad.prototype._detectProductId = function() {
 };
 
 Gamepad.prototype.connect = function() {
-    if( ! this._hasProductId( this._type ) && ! this._detectProductId() ) {
+    if( ! this._detectControllerConfiguration() ) {
         console.log( ( 'A product for the vendor "' + this._type + '" could not be detected.' ).red );
         process.exit( 0 );
     }
