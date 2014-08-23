@@ -1,0 +1,76 @@
+{
+    "vendorID": 1133,
+    "productID": 49686,
+    "buttons": [
+        {
+            "value": 24,
+            "pin": 4,
+            "name": "1"
+        },
+        {
+            "value": 40,
+            "pin": 4,
+            "name": "2"
+        },
+        {
+            "value": 72,
+            "pin": 4,
+            "name": "3"
+        },
+        {
+            "value": 136,
+            "pin": 4,
+            "name": "4"
+        },
+        {
+            "value": 1,
+            "pin": 5,
+            "name": "5"
+        },
+        {
+            "value": 2,
+            "pin": 5,
+            "name": "6"
+        },
+        {
+            "value": 4,
+            "pin": 5,
+            "name": "7"
+        },
+        {
+            "value": 8,
+            "pin": 5,
+            "name": "8"
+        },
+        {
+            "value": 16,
+            "pin": 5,
+            "name": "9"
+        },
+        {
+            "value": 32,
+            "pin": 5,
+            "name": "10"
+        },
+        {
+            "value": 1,
+            "pin": 0,
+            "name": "dpadLeft"
+        },
+        {
+            "value": 254,
+            "pin": 0,
+            "name": "dpadRight"
+        },
+        {
+            "value": 1,
+            "pin": 1,
+            "name": "dpadUp"
+        },
+        {
+            "value": 254,
+            "pin": 1,
+            "name": "dpadDown"
+        }
+    ]
+}
