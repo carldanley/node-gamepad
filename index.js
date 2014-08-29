@@ -15,7 +15,7 @@ const EventEmitter = require( 'events' ).EventEmitter;
 const util = require( 'util' );
 const fs = require( 'fs' );
 const colors = require( 'colors' );
-const path = require('path');
+const path = require( 'path' );
 
 // export the constructor
 module.exports = Gamepad;
