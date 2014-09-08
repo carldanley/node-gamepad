@@ -5,10 +5,10 @@
         {
             "name": "left",
             "x": {
-                "pin": 6
+                "pin": 0
             },
             "y": {
-                "pin": 4
+                "pin": 1
             }
         },
         {
@@ -23,23 +23,23 @@
     ],
     "buttons": [
         {
-            "value": 1,
-            "pin": 0,
+            "value": 6,
+            "pin": 4,
             "name": "dpadLeft"
         },
         {
-            "value": 254,
-            "pin": 0,
+            "value": 2,
+            "pin": 4,
             "name": "dpadRight"
         },
         {
-            "value": 254,
-            "pin": 1,
+            "value": 4,
+            "pin": 4,
             "name": "dpadDown"
         },
         {
-            "value": 1,
-            "pin": 1,
+            "value": 0,
+            "pin": 4,
             "name": "dpadUp"
         },
         {
