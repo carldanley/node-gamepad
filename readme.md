@@ -17,6 +17,8 @@ npm install node-gamepad
 1. n64/retrolink
 1. logitech/rumblepad2
 1. logitech/dualaction
+1. logitech/gamepadf710
+1. microsoft/sidewinder-precision-2
 
 ## How to Use
 
