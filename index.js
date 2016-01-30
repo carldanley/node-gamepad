@@ -41,6 +41,9 @@ function Gamepad( type, options ) {
     this._config = {};
     this._states = {};
     this._options = options || {};
+    
+    // Expand number of max listeners to 100 (so we can listen to up to 100 event types)
+    this.setMaxListeners(100)
 
     // on process exit, disconnect from any devices we may be connected to.
     process.on( 'exit', this.disconnect.bind( this ) );
