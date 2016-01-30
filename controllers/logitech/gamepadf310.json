@@ -23,6 +23,16 @@
     ],
     "buttons": [
         {
+            "value": 64,
+            "pin": 5,
+            "name": "leftJoystick"
+        },
+        {
+            "value": 128,
+            "pin": 5,
+            "name": "rightJoystick"
+        },
+        {
             "value": 16,
             "pin": 5,
             "name": "back"
