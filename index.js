@@ -147,6 +147,28 @@ Gamepad.prototype.connect = function() {
     this.emit( 'connecting' );
     this._loadConfiguration();
     this._usb = new HID.HID( this._config.vendorID, this._config.productID );
+
+    // Debug: Show each pin and current value
+    if (typeof this._options.debug === 'boolean' && this._options.debug === true) {
+        this._usb.on( 'data', function(data) {
+
+            // Build a message with input values from pins
+            // Example:
+            // Input pin values:  0:128 |   1:127 |   2:128 |   3:132 |   4:40 |   5:0 |   6:0 |   7:255 |
+
+            var logMessage = 'Input pin values:  '
+
+            // Check up to 100 pins for input
+            for( var i = 0; i < 100; i ++ ) {
+                if (i in data) {
+                    logMessage += i + ':' + data[i] + ' |   '
+                }
+            }
+
+            console.log(logMessage);
+        });
+    }
+
     this._usb.on( 'data', this._onControllerFrame.bind( this ) );
     this.emit( 'connected' );
 
