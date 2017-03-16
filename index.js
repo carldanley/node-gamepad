@@ -247,6 +247,6 @@ Gamepad.prototype._processStatus = function( data ) {
 
 Gamepad.prototype.disconnect = function() {
     if( this._usb ) {
-        this._usb.disconnect();
+        this._usb.close();
     }
 };
