@@ -1,6 +1,6 @@
 /**
  * Allows you to effortlessly interface your node applications with a variety of gamepad controllers.
- * 
+ *
  * @example
  *     var controller = ( new Gamepad( 'ps3/dualshock3' ) ).connect();
  *     controller.on( 'x:press', function() {
@@ -28,7 +28,7 @@ util.inherits( Gamepad, EventEmitter );
  *
  * @class Gamepad
  * @constructor
- * 
+ *
  * @param {String} type The type of gamepad to be loaded. This can follow 2 forms: (1) vendor ID or (2) vendor ID/productID. Thus, "ps3" and "ps3/dualshock3" are both valid options.
  * @param {Object} options A hash of options that can be set by the user.
  * @param {Number} [options.vendorID] When this value is specified it will overwrite the existing `vendorID` that's loaded from the detected configuration.
@@ -76,12 +76,12 @@ Gamepad.prototype._loadConfiguration = function() {
 };
 
 /**
- * Detects whether or not the specified string has a product ID in the form of 
+ * Detects whether or not the specified string has a product ID in the form of
  * "vendorID/productID" or not.
  *
  * @private
  * @method _hasProductId
- * 
+ *
  * @param {String} str The string we're using to check for a product ID.
  * @return {Boolean} Indicates whether or not a product ID was detected.
  */
@@ -96,7 +96,7 @@ Gamepad.prototype._hasProductId = function( str ) {
  *
  * @private
  * @method _detectControllerConfiguration
- * 
+ *
  * @return {Boolean} Indicates whether or not the controller configuration could be detected.
  */
 Gamepad.prototype._detectControllerConfiguration = function() {
@@ -116,7 +116,7 @@ Gamepad.prototype._detectControllerConfiguration = function() {
     // configurations for this particular vendor while checking to see if any of
     // them match each other (indicating that we have a configuration something
     // that is currently plugged in).
-    // 
+    //
     // TODO: make this faster by looping through loaded controllers once instead
     // of once per HID device.
     var devices = HID.devices();
@@ -152,6 +152,14 @@ Gamepad.prototype.connect = function() {
 
     return this;
 };
+
+Gamepad.prototype.isConnected = function(){
+  if( this._usb !== null ){
+    return true;
+  }else{
+    return false;
+  }
+}
 
 Gamepad.prototype._onControllerFrame = function( data ) {
     this._processJoysticks( data );

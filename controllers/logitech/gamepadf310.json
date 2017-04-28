@@ -83,23 +83,23 @@
             "name": "start"
         },
         {
-            "value": 1,
-            "pin": 6,
+            "value": 6,
+            "pin": 4,
             "name": "dpadLeft"
         },
         {
-            "value": 254,
-            "pin": 6,
+            "value": 2,
+            "pin": 4,
             "name": "dpadRight"
         },
         {
-            "value": 1,
-            "pin": 6,
+            "value": 0,
+            "pin": 4,
             "name": "dpadUp"
         },
         {
-            "value": 254,
-            "pin": 6,
+            "value": 4,
+            "pin": 4,
             "name": "dpadDown"
         }
     ]
