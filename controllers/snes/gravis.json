@@ -1,0 +1,66 @@
+{
+    "vendorID" : 1064,
+    "productID" : 16385,
+    "buttons" : [
+        {
+            "name": "up",
+            "pin": 1,
+            "value": 0
+        },
+        {
+            "name": "down",
+            "pin": 1,
+            "value": 255
+        },
+        {
+            "name": "left",
+            "pin": 0,
+            "value": 0
+        },
+        {
+            "name": "right",
+            "pin": 0,
+            "value": 255
+        },
+        {
+            "name": "select",
+            "pin": 3,
+            "value": 1
+        },
+        {
+            "name": "y",
+            "pin": 2,
+            "value": 1
+        },
+        {
+            "name": "start",
+            "pin": 3,
+            "value": 2
+        },
+        {
+            "name": "b",
+            "pin": 2,
+            "value": 2
+        },
+        {
+            "name": "l",
+            "pin": 2,
+            "value": 16
+        },
+        {
+            "name": "r",
+            "pin": 2,
+            "value": 32
+        },
+        {
+            "name": "a",
+            "pin": 2,
+            "value": 4
+        },
+        {
+            "name": "x",
+            "pin": 2,
+            "value": 8
+        }
+    ]
+}
