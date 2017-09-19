@@ -2,16 +2,16 @@
     "vendorID": 1411,
     "productID": 8288,
     "buttons": [
-      {
-        "pin": 3,
-        "value": 16,
-        "name": "turbo"
-      },
-      {
-        "pin": 3,
-        "value": 32,
-        "name": "clear"
-      },
+        {
+          "pin": 3,
+          "value": 16,
+          "name": "turbo"
+        },
+        {
+          "pin": 3,
+          "value": 32,
+          "name": "clear"
+        },
         {
             "pin": 2,
             "value": 1,
