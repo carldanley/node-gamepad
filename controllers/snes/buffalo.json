@@ -1,0 +1,76 @@
+{
+    "vendorID": 1411,
+    "productID": 8288,
+    "buttons": [
+        {
+          "pin": 3,
+          "value": 16,
+          "name": "turbo"
+        },
+        {
+          "pin": 3,
+          "value": 32,
+          "name": "clear"
+        },
+        {
+            "pin": 2,
+            "value": 1,
+            "name": "a"
+        },
+        {
+            "pin": 2,
+            "value": 2,
+            "name": "b"
+        },
+        {
+            "pin": 2,
+            "value": 8,
+            "name": "y"
+        },
+        {
+            "pin": 2,
+            "value": 4,
+            "name": "x"
+        },
+        {
+            "pin": 2,
+            "value": 32,
+            "name": "r"
+        },
+        {
+            "pin": 2,
+            "value": 16,
+            "name": "l"
+        },
+        {
+            "pin": 2,
+            "value": 128,
+            "name": "start"
+        },
+        {
+            "pin": 2,
+            "value": 64,
+            "name": "select"
+        },
+        {
+            "pin": 1,
+            "value": 0,
+            "name": "up"
+        },
+        {
+            "pin": 1,
+            "value": 255,
+            "name": "down"
+        },
+        {
+            "pin": 0,
+            "value": 0,
+            "name": "left"
+        },
+        {
+            "pin": 0,
+            "value": 255,
+            "name": "right"
+        }
+    ]
+}
